@@ -1,4 +1,4 @@
-let hash = module.export = function(obj) {
+let hash= module.exports= function(obj) {
 	let str = JSON.stringify(obj);
 	let a = 101;
 	let n = Math.pow(2, 32);

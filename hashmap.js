@@ -12,7 +12,7 @@ function HashMap(size) {
 	};
 	this.get = function(key) {
 		let keyHash = hash(key) % this.data.length;
-		return this.data(keyHash);
+		return this.data[keyHash];
 	};
 
 	this.print = function() {
@@ -35,3 +35,13 @@ function HashMap(size) {
 		}
 	};
 }
+
+var hm = new HashMap(1000);
+
+for (let i = 0; i<100; i++) {
+	hm.add(Math.random().toString(36).substring(7), i);
+}
+
+hm.print();
+
+hm123.print();
